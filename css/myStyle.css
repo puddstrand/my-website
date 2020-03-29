@@ -61,7 +61,6 @@ a:hover {
 }
 
 .gallery {
-	margin: 30px;
   min-height: 800px;
   display: flex;
   justify-content: center;
