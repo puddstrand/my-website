@@ -22,6 +22,7 @@ body {
 }
 
 h1 {
+  font-size: 2vw;
   letter-spacing: 4vw;
   text-transform: uppercase;
   text-align: center;
@@ -46,7 +47,7 @@ a:hover {
   display: block;
   position: fixed;
   padding: 10px;
-  font-size: 150%;
+  font-size: 2vw;
   letter-spacing: 0.5vw;
   left: 15px;
   top: 50%;
@@ -61,7 +62,8 @@ a:hover {
 }
 
 .gallery {
-  min-height: 800px;
+  min-height: 1200px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -97,7 +99,7 @@ a:hover {
 /* detail page */
 
 .gallery-detail {
-  width: 450px;
+  width: 40vw;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 20px;
@@ -106,8 +108,15 @@ a:hover {
 
 .detail-target-img {
   width: 100%;
-  box-shadow: 0px 0px 20px white;
 }
+
+ section {
+   display: block;
+   font-size: 1vw;
+   width: 50vw;
+   line-height: 2;
+   padding: 20px;
+ }
 
 /* about */
 
@@ -115,18 +124,15 @@ a:hover {
   width: 50vw;
   line-height: 2;
   margin: 0% 8% 0% 0%;
+  font-size: 3vw;
 }
 
 hr {
   border:none;
-  height: 20px;
  	width: 100%;
-  text-align: center;
-	height: 50px;
-	margin: 1%;
-	border-bottom: 1px solid rgba(255, 255, 255, 0);
-	box-shadow: 0 20px 20px -20px blue;
-  margin: -50px auto 10px;
+  height: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+	box-shadow: 0 20px 20px -20px white;
 }
 
 /* footer */
@@ -140,6 +146,7 @@ footer {
   display: flex;
   justify-content: center;
   margin-bottom: -100px;
+  font-size: 1.5vw;
 }
 
 footer:hover {
@@ -156,6 +163,10 @@ footer:hover {
   }
   .gallery {
     width: 100%;
+    min-height: 800px;
+  }
+  .gallery-detail {
+    width: 70vw;
   }
 }
 
@@ -166,6 +177,10 @@ footer:hover {
   }
   .gallery {
     width: 100%;
+    min-height: 500px;
+  }
+  .gallery-detail {
+    width: 70vw;
   }
 }
 
@@ -176,6 +191,9 @@ footer:hover {
   }
   .gallery {
     width: 100%;
-    min-height: 1300px;
+    min-height: 600px;
+  }
+  .gallery-detail {
+    width: 70vw;
   }
 }
