@@ -3,51 +3,51 @@ console.log("hello gallery");
 // my works
 var works = [
  {
-   "title": "Birgitta Italic",
-   "description": "Digitalized embroidery letters by Birgitta Andersson. <br> I found the capital letters in Birgittas self-published book <br> of traceable embroidery letters from the 40s. I'm currently <br> digitalizing and expanding her alphabet to also include <br> lowercase letters and symbols.",
+   "title": "<b>Birgitta Italic</b>",
+   "description": "Digitalized embroidery letters by Birgitta Andersson. I found the capital letters in Birgittas self-published book of traceable embroidery letters from the 40s. I'm currently digitalizing and expanding her alphabet to also include lowercase letters and symbols.",
    "imgprefix": "birgitta",
-   "imgcount": 5,
+   "imgcount": 4,
    "year": " Work in progress",
    "mediatype": "jpg",
  },
  {
-   "title": "Curio Magazine",
-   "description": "A Magazine concept for the curious, the thinkers and <br> the people that find themselves googling random facts <br> in the middle of the night. It's a magazine centered <br> around wide and often hard-to-grasp subjects, but <br> subjects that inevitably affect us all.",
+   "title": "<b>Curio Magazine</b>",
+   "description": "A Magazine concept for the curious, the thinkers and the people that find themselves googling random facts in the middle of the night. It's a magazine centered around wide and often hard-to-grasp subjects, but subjects that inevitably affect us all.",
    "imgprefix": "curio",
-   "imgcount": 8,
+   "imgcount": 6,
    "year": " 2020",
-   "mediatype": "jpg",
+   "mediatype": "gif",
  },
  {
-   "title": "Konstfack at Stockholm Furniture and Light Fair",
-   "description": "Visual identity and catalogue for the 3rd year students at <br> Interior Architecture & Furniture Design at Konstfack, in <br> collaboration with Emma-Lisa Henriksson and Gustaf Östlund. <br> The students were sponsored with leather and wood by <br> Tärnsjö Garveri and Svenskt Trä, which we also wanted <br> to echo through the graphic material.",
+   "title": "<b>Konstfack at Stockholm Furniture and Light Fair</b>",
+   "description": "Visual identity and catalogue for the 3rd year students at Interior Architecture & Furniture Design at Konstfack, in collaboration with Emma-Lisa Henriksson and Gustaf Östlund. The students were sponsored with leather and wood by Tärnsjö Garveri and Svenskt Trä, which we also wanted to echo through the graphic material.",
    "imgprefix": "cows_trees",
    "imgcount": 4,
    "year": " 2020",
    "mediatype": "gif",
  },
  {
-    "title": "Hans & Greta",
-    "description": "An interpratation of the famous tale by the <br> Grimm brothers in the form of a 360-book. <br> It is ultimately an experiment about how <br> to keep the bookformat relevant in a time <br> of interactive apps.",
+    "title": "<b>Hans & Greta</b>",
+    "description": "An interpratation of the famous tale by the Grimm brothers in the form of a 360-book. It is ultimately an experiment about how to keep the bookformat relevant in a time of interactive apps.",
     "imgprefix": "hans_greta",
     "imgcount": 6,
     "year": " 2019",
     "mediatype": "jpg",
  },
  {
-    "title": "Människor & Växter",
-    "description": "A book I wrote, illustrated and bound by myself. <br> It contains short stories about the relationship <br> between humans and plants and vice versa.",
-    "imgprefix": "mov",
-    "imgcount": 3,
-    "year": " 2015",
-    "mediatype": "jpg",
- },
- {
-    "title": "Book covers",
-    "description": "A made up bookseries with the red <br> thread being female identity. I used <br> the same typeface (or a similar one) <br> to the one used on the first editions <br> of the works. I wanted the design <br> to speak of the separation between <br> body and mind.",
+    "title": "<b>Book covers</b>",
+    "description": "A made up bookseries with the red thread being female identity. I used the same typeface (or a similar one) to the one used on the first editions of the works. I wanted the design to speak of the separation between body and mind.",
     "imgprefix": "hon_jag",
     "imgcount": 9,
     "year": " 2018",
+    "mediatype": "gif",
+ },
+ {
+    "title": "<b>Människor & Växter</b>",
+    "description": "A book I wrote, illustrated and bound by myself. It contains short stories about the relationship between humans and plants and vice versa.",
+    "imgprefix": "mov",
+    "imgcount": 2,
+    "year": " 2015",
     "mediatype": "jpg",
  },
 ];
@@ -71,7 +71,8 @@ function showAll() {
   worklist.empty();
   finalhtml = '';
   $.each( works, function( i, val ) {
-     if (val.mediatype == "gif") {
+     if (val.mediatype == "gif")
+        {
        $('.target-img', workElement).attr('src', "./img/" +val.imgprefix+".gif");
      } else {
       $('.target-img', workElement).attr('src', "./img/" +val.imgprefix+"_1.jpg");
@@ -95,11 +96,11 @@ function addDetailClick() {
       worklist.empty();
       var thework = works[this.id];
       var tempworks = ""
-      var detailInfo = $('.detail-target-title', workDetailClone).html( thework.title + "   " + thework.year + " <br><br> " + thework.description);
+      var detailInfo = $('.detail-target-title', workDetailClone).html( "<section>" + thework.title + " , " + thework.year + " <br> " + thework.description + "</section>" + "<hr>");
       tempworks = tempworks + detailInfo.html();
 
       for (var i = 0; i < thework.imgcount; i++) {
-        $('.detail-target-img', galleryDetailClone).attr('src', "./img/" + thework.imgprefix + "_" + (i+1) + ".jpg");
+        $('.detail-target-img', galleryDetailClone).attr('src', "./img/" + thework.imgprefix + "_" + (i+1) + ".png");
         tempworks = tempworks + galleryDetailClone.html();
       }
       worklist.append( tempworks );
