@@ -22,7 +22,6 @@ body {
 }
 
 h1 {
-  font-size: 2vw;
   letter-spacing: 4vw;
   text-transform: uppercase;
   text-align: center;
@@ -34,6 +33,7 @@ a {
   color: blue;
   flex: 1;
   padding: 5px;
+  font-size: 1.5vw;
 }
 
 a:hover {
@@ -57,12 +57,12 @@ a:hover {
 
 .container {
   color: indigo;
-  font-size: 90%;
+  font-size: 1vw;
   padding-top: 8%;
 }
 
 .gallery {
-  min-height: 1200px;
+  min-height: 1250px;
   max-width: 100%;
   display: flex;
   justify-content: center;
@@ -123,8 +123,7 @@ a:hover {
 .gallery-about {
   width: 50vw;
   line-height: 2;
-  margin: 0% 8% 0% 0%;
-  font-size: 3vw;
+  font-size: 1.5vw;
 }
 
 hr {
@@ -156,44 +155,46 @@ footer:hover {
 
 /* media queries */
 
-@media (max-width: 700px) {
-  .gallery-item {
-    min-width: 80%;
-    flex-wrap: wrap;
+@media (max-width: 1000px) {
+  .center {
+    font-size: 1.5vw;
   }
-  .gallery {
-    width: 100%;
-    min-height: 800px;
-  }
-  .gallery-detail {
-    width: 70vw;
-  }
-}
 
-@media (max-width: 400px) {
+  .container {
+    font-size: 3vw;
+  }
+
   .gallery-item {
     min-width: 80%;
     flex-wrap: wrap;
   }
+
   .gallery {
     width: 100%;
     min-height: 500px;
   }
-  .gallery-detail {
-    width: 70vw;
-  }
-}
 
-@media (max-width: 1000px) {
-  .gallery-item {
-    min-width: 80%;
-    flex-wrap: wrap;
+  a {
+    font-size: 2.5vw;
   }
-  .gallery {
-    width: 100%;
-    min-height: 600px;
+
+  .back-to-all-work {
+    font-size: 2.5vw;
+    left: 10px;
+    top: 25%;
   }
+
   .gallery-detail {
     width: 70vw;
+  }
+
+  section {
+    font-size: 3vw;
+    margin-top: 30px;
+  }
+
+  .gallery-about {
+    font-size: 3vw;
+    margin-top: 30px;
   }
 }
